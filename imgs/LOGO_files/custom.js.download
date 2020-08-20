@@ -1,0 +1,29 @@
+//validations.js file attached to logo.html
+$(window).scroll(function() {
+	if ($(this).scrollTop()>5) {
+		$(".navbar").addClass("navbar-scroll");
+	}
+	else{ 
+		$(".navbar").removeClass("navbar-scroll");
+	}
+})
+
+$(window).scroll(function() {
+	if($(this).scrollTop()>5){
+		$(".navbar .navbar-brand img").attr("src","./imgs/logo.png");
+	}
+	else{
+		$(".navbar .navbar-brand img").attr("src","./imgs/logo-alt.png");	
+	}
+})
+
+$(window).scroll(function() {
+	if($(this).scrollTop()>5){
+		$(".navbar-toggle .fa").css("color","#000");						
+		$(".navbar-collapse").css("background","#fff")
+	}
+	else{
+		$(".navbar-toggle .fa").css("color","#fff");	
+		$(".navbar-collapse").css("background","#333");
+	}
+})
